@@ -94,11 +94,9 @@ const colors = ['#fff', '#000',
 let ArColor =['']
 
 function getRandomColor() {
-
+  // return '#fff'
   let elem = ArColor[ArColor.length-1]
-  console.log(elem)
   ArColor.splice(0,ArColor.length);
-  console.log(ArColor)
   ArColor[0] = elem
  
   do{
@@ -108,4 +106,18 @@ function getRandomColor() {
     ArColor[ArColor.length-1] === ArColor[ArColor.length-2]
   )
 return ArColor[ArColor.length-1]
+}
+
+
+function winTheGame(){
+  function kill(){
+  const circle = document.querySelector('.circle')
+
+  if(circle){
+    circle.click()
+  }
+
+  
+  }
+ setInterval(kill, 42);
 }
